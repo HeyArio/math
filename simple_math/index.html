@@ -1,0 +1,59 @@
+<html lang='en'>
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <link rel='stylesheet' href='css/styles.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'>
+  <link rel="icon" type="image/png" sizes="16x16" href="visuals/favicon-16x16.png">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <script src="drawing.js"></script>
+  <script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  <script>
+    function onOpenCvReady() {
+      console.log( 'OpenCV Ready', cv);
+    }
+  </script>
+  <script src="preocessing.js"></script>
+  <script src="math.js"></script>
+
+</head>
+
+<body>
+
+  <div class='container'>
+
+   
+    <h1 id="title">Simple Math</h1>
+
+    <h2 id='question'><span id='n1'>3</span> + <span id='n2'>2</span> = </h2>
+
+    <canvas id="my-canvas"></canvas>
+
+  </div>
+
+  <div class='container'>
+    <button id='checkAnswer' class='btn' value='Check'>Submit Answer</button>
+  </div>
+  <div class='container'>
+    <h3 id="score">Score : <span id='n3'>0</span></h3>
+  </div>
+
+  
+  <script>
+
+    loadModel();
+    prepareCanvas();
+    next();
+
+    document.getElementById('checkAnswer').addEventListener('click', function () {
+        checkAnswer();
+        clearCanvas();
+        next();
+        
+    })
+
+  </script>
+
+</body>
+
+</html>
