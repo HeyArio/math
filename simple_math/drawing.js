@@ -49,6 +49,7 @@ function prepareCanvas() {
         isPainting = true;
         currentX = event.touches[0].clientX - canvas.offsetLeft;
         currentY = event.touches[0].clientY - canvas.offsetTop;
+        return false;
     });
 
     canvas.addEventListener('touchend', function (event) {
