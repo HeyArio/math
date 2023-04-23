@@ -1,6 +1,6 @@
 var answer;
 var audio_right = new Audio('sfx/fairy.mp3');
-var audio_wrong = new Audio('sfx/party_horn.mp3');
+var audio_wrong = new Audio('sfx/Meep Merp Sound Effect.mp3');
 var celebrate = new Audio('sfx/party_horn.mp3');
 var score = 0;
 var background = []
